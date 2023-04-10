@@ -2,7 +2,15 @@ version: "3"
 
 services:
   redis:
-    build: .
+    image: redis
     ports:
       - "6379:6379"
     restart: always
+    command: redis-server --appendonly yes --replica-read-only no
+    networks:
+      - funeraria-network
+
+networks:
+  funeraria-network:
+    name: funeraria-network
+
