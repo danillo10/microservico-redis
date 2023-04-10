@@ -12,6 +12,5 @@ services:
 
 networks:
   funeraria-network:
-    external:
-      name: funeraria-network
+    name: funeraria-network
 
